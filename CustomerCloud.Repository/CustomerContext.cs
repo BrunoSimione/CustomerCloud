@@ -11,7 +11,7 @@ namespace CustomerCloud.Repository
 {
     public class CustomerContext : DbContext
     {
-        public CustomerContext() : base("CustomerCloud") { }
+        public CustomerContext() : base(@"Server=Data Source=(localdb)\MSSQLLocalDB;Database=CustomerCloud;Integrated Security=True;") { }
 
         DbSet<CustomerEntity> Customers { get; set; }
         DbSet<AddressEntity> Addresses { get; set; }

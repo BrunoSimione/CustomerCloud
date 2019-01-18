@@ -1,7 +1,9 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CustomerCloud.Entities
 {
+    [Table("Addresses")]
     public class AddressEntity
     {
         public Guid Id { get; set; }
