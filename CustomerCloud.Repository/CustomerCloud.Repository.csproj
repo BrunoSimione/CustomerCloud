@@ -49,6 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerContext.cs" />
+    <Compile Include="Migrations\201901181607316_Initial-Add.cs" />
+    <Compile Include="Migrations\201901181607316_Initial-Add.Designer.cs">
+      <DependentUpon>201901181607316_Initial-Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +65,11 @@
       <Project>{102731B5-2FCD-4EB9-A4B0-77BAB0553656}</Project>
       <Name>CustomerCloud.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201901181607316_Initial-Add.resx">
+      <DependentUpon>201901181607316_Initial-Add.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

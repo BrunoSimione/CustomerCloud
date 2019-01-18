@@ -11,12 +11,12 @@ namespace CustomerCloud.Repository
 {
     public class CustomerContext : DbContext
     {
-        public CustomerContext() : base(@"Server=Data Source=(localdb)\MSSQLLocalDB;Database=CustomerCloud;Integrated Security=True;") { }
+        public CustomerContext() : base(@"Data Source=(localdb)\ProjectsV13;Database=CustomerCloud;Integrated Security=True;") { }
 
-        DbSet<CustomerEntity> Customers { get; set; }
-        DbSet<AddressEntity> Addresses { get; set; }
-        DbSet<OrderDetailEntity> OrderDetails { get; set; }
-        DbSet<OrderEntity> Orders { get; set; } 
-        DbSet<ProductEntity> Products { get; set; }
+        public DbSet<CustomerEntity> Customers { get; set; }
+        public DbSet<AddressEntity> Addresses { get; set; }
+        public DbSet<OrderDetailEntity> OrderDetails { get; set; }
+        public DbSet<OrderEntity> Orders { get; set; } 
+        public DbSet<ProductEntity> Products { get; set; }
     }
 }
