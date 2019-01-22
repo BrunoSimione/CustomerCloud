@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerCloud.Entities", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerCloud.Repository", "CustomerCloud.Repository\CustomerCloud.Repository.csproj", "{7FC6CD43-397A-431C-A3FC-14464E1E0713}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerCloud.Logic", "CustomerCloud.Logic\CustomerCloud.Logic.csproj", "{1C76F96C-7719-42BA-A4DF-E7376C4AF8D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerCloud.DTOs", "CustomerCloud.DTOs\CustomerCloud.DTOs.csproj", "{EC45DA9A-C8DA-4D92-8E0F-3CC73991C090}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{7FC6CD43-397A-431C-A3FC-14464E1E0713}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FC6CD43-397A-431C-A3FC-14464E1E0713}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FC6CD43-397A-431C-A3FC-14464E1E0713}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C76F96C-7719-42BA-A4DF-E7376C4AF8D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C76F96C-7719-42BA-A4DF-E7376C4AF8D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C76F96C-7719-42BA-A4DF-E7376C4AF8D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C76F96C-7719-42BA-A4DF-E7376C4AF8D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC45DA9A-C8DA-4D92-8E0F-3CC73991C090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC45DA9A-C8DA-4D92-8E0F-3CC73991C090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC45DA9A-C8DA-4D92-8E0F-3CC73991C090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC45DA9A-C8DA-4D92-8E0F-3CC73991C090}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
