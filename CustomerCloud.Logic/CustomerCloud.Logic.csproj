@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AddressLogic.cs" />
     <Compile Include="CutomerLogic.cs" />
+    <Compile Include="ILogic.cs" />
     <Compile Include="OrderDetailLogic.cs" />
     <Compile Include="OrderLogic.cs" />
     <Compile Include="ProductLogic.cs" />
