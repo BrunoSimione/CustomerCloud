@@ -31,8 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,12 +48,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddressLogic.cs" />
+    <Compile Include="BaseLogic.cs" />
     <Compile Include="CutomerLogic.cs" />
     <Compile Include="ILogic.cs" />
     <Compile Include="OrderDetailLogic.cs" />
     <Compile Include="OrderLogic.cs" />
     <Compile Include="ProductLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomerCloud.DTOs\CustomerCloud.DTOs.csproj">
+      <Project>{EC45DA9A-C8DA-4D92-8E0F-3CC73991C090}</Project>
+      <Name>CustomerCloud.DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomerCloud.Entities\CustomerCloud.Entities.csproj">
+      <Project>{102731B5-2FCD-4EB9-A4B0-77BAB0553656}</Project>
+      <Name>CustomerCloud.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomerCloud.Repository\CustomerCloud.Repository.csproj">
+      <Project>{7FC6CD43-397A-431C-A3FC-14464E1E0713}</Project>
+      <Name>CustomerCloud.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

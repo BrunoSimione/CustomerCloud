@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace CustomerCloud.Logic
 {
-    interface ILogic<T>
+    interface ILogic<TDTO>
     {
-        void Create(T item);
-        T Read(T item);
-        void Update(T item);
-        void Delete(T item);
+        void Create(TDTO item);
+        TDTO Read(Guid Id);
+        void Update(TDTO item);
+        void Delete(Guid Id);
     }
 }

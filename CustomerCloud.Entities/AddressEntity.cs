@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace CustomerCloud.Entities
 {
     [Table("Addresses")]
-    public class AddressEntity
+    public class AddressEntity : IEntity
     {
         public Guid Id { get; set; }
         public string Street { get; set; }

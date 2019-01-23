@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerCloud.Logic", "Cust
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerCloud.DTOs", "CustomerCloud.DTOs\CustomerCloud.DTOs.csproj", "{EC45DA9A-C8DA-4D92-8E0F-3CC73991C090}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicTest", "LogicTest\LogicTest.csproj", "{A5438E9B-CF47-4783-9D68-0A4C76760911}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{EC45DA9A-C8DA-4D92-8E0F-3CC73991C090}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC45DA9A-C8DA-4D92-8E0F-3CC73991C090}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC45DA9A-C8DA-4D92-8E0F-3CC73991C090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5438E9B-CF47-4783-9D68-0A4C76760911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5438E9B-CF47-4783-9D68-0A4C76760911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5438E9B-CF47-4783-9D68-0A4C76760911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5438E9B-CF47-4783-9D68-0A4C76760911}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
