@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoMapper;
 using CustomerCloud.DTOs;
 using CustomerCloud.Entities;
 using CustomerCloud.Logic;
@@ -9,40 +10,59 @@ namespace LogicTest
     [TestClass]
     public class AddressTests
     {
-        private AddressLogic _addressLogic;
-        private AddressDTO _addressLogicDTO;
-
+        
         [TestInitialize]
-        public void Init()
-        {
-            _addressLogic = new AddressLogic();
-            _addressLogicDTO = new AddressDTO()
-                {
-                    Id = Guid.NewGuid(),
-                    City = Faker.Address.USCity(),
-                    Street = Faker.Address.StreetName(),
-                    Number = Faker.Number.RandomNumber(),
-                    PostalCode = Faker.Address.CanadianZipCode(),
-                    Province = Faker.Address.Province()
-                };
-        }
-
+        public void Init() { }
         [TestMethod]
         public void Create()
         {
-            _addressLogic.Create(_addressLogicDTO);
-            AddressDTO result = _addressLogic.Read(_addressLogicDTO.Id);
-
+            Mapper.Reset();
+            AddressLogic addressLogic = new AddressLogic();
+            AddressDTO addr = CreateAddress();
+            addressLogic.Create(addr);
+            AddressDTO result = addressLogic.Read(addr.Id);
             Assert.IsNotNull(result);
+            addressLogic.Delete(addr.Id);
         }
 
+        [TestMethod]
         public void Update()
         {
-            
-           // _addressLogic.Update( );
+            Mapper.Reset();
+            AddressLogic addressLogic = new AddressLogic();
+            AddressDTO addr = CreateAddress();
+            addressLogic.Create(addr);
+            string newCity = Faker.Address.USCity();
+            addr.City = newCity;
+            addressLogic.Update(addr );
+            AddressDTO updatedAddress = addressLogic.Read(addr.Id);
+            Assert.AreEqual(newCity, updatedAddress.City);
+            addressLogic.Delete(addr.Id);
         }
 
-        
+        [TestMethod]
+        public void Delete()
+        {
+            Mapper.Reset();
+            AddressLogic addressLogic = new AddressLogic();
+            AddressDTO addr = CreateAddress();
+            addressLogic.Create(addr);
+            addressLogic.Delete(addr.Id);
+            AddressDTO dto = addressLogic.Read(addr.Id);
+            Assert.IsNull(dto);
+        }
 
+        private AddressDTO CreateAddress()
+        {
+            return new AddressDTO()
+            {
+                Id = Guid.NewGuid(),
+                City = Faker.Address.USCity(),
+                Street = Faker.Address.StreetName(),
+                Number = Faker.Number.RandomNumber(),
+                PostalCode = Faker.Address.CanadianZipCode(),
+                Province = Faker.Address.Province()
+            };
+        }
     }
 }
