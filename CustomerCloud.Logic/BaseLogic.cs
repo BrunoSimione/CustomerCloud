@@ -26,7 +26,7 @@ namespace CustomerCloud.Logic
 
         public void Delete(Guid Id)
         {
-            throw new NotImplementedException();
+            _repo.Delete(Id);
         }
 
         public TDTO Read(Guid Id)
@@ -36,7 +36,8 @@ namespace CustomerCloud.Logic
 
         public void Update(TDTO item)
         {
-            throw new NotImplementedException();
+            TEntity entity = Mapper.Map<TEntity>(item);
+            _repo.Update(entity);
         }
     }
 }
