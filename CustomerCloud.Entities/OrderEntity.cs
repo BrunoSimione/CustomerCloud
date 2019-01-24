@@ -8,6 +8,6 @@ namespace CustomerCloud.Entities
     public class OrderEntity
     {
         public Guid Id { get; set; }
-        public List<OrderDetailEntity> Details { get; set; }
+        public virtual ICollection<OrderDetailEntity> Details { get; set; }
     }
 }

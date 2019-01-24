@@ -7,6 +7,6 @@ namespace CustomerCloud.Entities
     public class OrderDetailEntity
     {
         public Guid Id { get; set; }
-        public ProductEntity Product { get; set; }
+        public virtual ProductEntity Product { get; set; }
     }
 }

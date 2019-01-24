@@ -13,6 +13,6 @@ namespace CustomerCloud.Entities
         public Guid Id { get; set; }
         public string Name { get; set; }
         public AddressEntity Address { get; set; }
-        public List<OrderEntity> Orders { get; set; }
+        public virtual ICollection<OrderEntity> Orders { get; set; }
     }
 }
