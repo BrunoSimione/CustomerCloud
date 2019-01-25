@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace CustomerCloud.Entities
 {
     [Table("Customers")]
-    public class CustomerEntity
+    public class CustomerEntity : IEntity
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

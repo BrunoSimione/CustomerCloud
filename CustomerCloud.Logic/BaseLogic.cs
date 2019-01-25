@@ -2,10 +2,6 @@
 using CustomerCloud.Entities;
 using CustomerCloud.Repository;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CustomerCloud.Logic
 {
@@ -15,6 +11,7 @@ namespace CustomerCloud.Logic
 
         public BaseLogic()
         {
+            Mapper.Initialize(cfg => cfg.CreateMap<TDTO, TEntity>());
             _repo = new Repository<TEntity>();
         }
 

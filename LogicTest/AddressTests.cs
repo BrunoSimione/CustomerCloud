@@ -17,7 +17,7 @@ namespace LogicTest
         public void Create()
         {
             Mapper.Reset();
-            AddressLogic addressLogic = new AddressLogic();
+            BaseLogic<AddressEntity, AddressDTO> addressLogic = new BaseLogic<AddressEntity, AddressDTO>();
             AddressDTO addr = CreateAddress();
             addressLogic.Create(addr);
             AddressDTO result = addressLogic.Read(addr.Id);
@@ -29,7 +29,7 @@ namespace LogicTest
         public void Update()
         {
             Mapper.Reset();
-            AddressLogic addressLogic = new AddressLogic();
+            BaseLogic<AddressEntity, AddressDTO> addressLogic = new BaseLogic<AddressEntity, AddressDTO>();
             AddressDTO addr = CreateAddress();
             addressLogic.Create(addr);
             string newCity = Faker.Address.USCity();
@@ -44,7 +44,7 @@ namespace LogicTest
         public void Delete()
         {
             Mapper.Reset();
-            AddressLogic addressLogic = new AddressLogic();
+            BaseLogic<AddressEntity, AddressDTO> addressLogic = new BaseLogic<AddressEntity, AddressDTO>();
             AddressDTO addr = CreateAddress();
             addressLogic.Create(addr);
             addressLogic.Delete(addr.Id);
