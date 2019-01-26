@@ -12,13 +12,13 @@ using System.Threading.Tasks;
 namespace LogicTest
 {
     [TestClass]
-    class CustomerTests
+    public class CustomerTests
     {
         [TestMethod]
         public void Create()
         {
             Mapper.Reset();
-            CustomerLogic customerLogic = new CustomerLogic();
+            BaseLogic<CustomerEntity, CustomerDTO> customerLogic = new BaseLogic<CustomerEntity, CustomerDTO>();
             CustomerDTO cust = CreateCustomer();
             customerLogic.Create(cust);
             CustomerDTO result = customerLogic.Read(cust.Id);
@@ -26,7 +26,7 @@ namespace LogicTest
             customerLogic.Delete(cust.Id);
         }
 
-
+        [TestMethod]
         public void Read()
         {
             Mapper.Reset();
@@ -38,17 +38,40 @@ namespace LogicTest
             Assert.AreEqual(cust.Id, result.Id);
         }
 
+        [TestMethod]
         public void Update()
         {
+            Mapper.Reset();
+            BaseLogic<CustomerEntity, CustomerDTO> customerLogic = new BaseLogic<CustomerEntity, CustomerDTO>();
+            CustomerDTO cust = CreateCustomer();
+            customerLogic.Create(cust);
+            cust.Name = Faker.Name.FullName();
+            customerLogic.Update(cust);
+            CustomerDTO updatedCustomer = customerLogic.Read(cust.Id);
+            Assert.IsNotNull(updatedCustomer);
+            Assert.AreEqual(cust.Name, updatedCustomer.Name);
+        }
+
+        [TestMethod]
+        public void Delete()
+        {
+            Mapper.Reset();
+            BaseLogic<CustomerEntity, CustomerDTO> customerLogic = new BaseLogic<CustomerEntity, CustomerDTO>();
+            CustomerDTO cust = CreateCustomer();
+            customerLogic.Create(cust);
+            customerLogic.Delete(cust.Id);
+            CustomerDTO result = customerLogic.Read(cust.Id);
+            Assert.IsNull(result);
 
         }
 
-        public void Delete()
-        { }
-
         private CustomerDTO CreateCustomer()
         {
-            throw new NotImplementedException();
+            return new CustomerDTO()
+            {
+                Id = Guid.NewGuid(),
+                Name = Faker.Name.FullName()
+            };
         }
 
     }

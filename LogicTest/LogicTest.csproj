@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="AddressTests.cs" />
     <Compile Include="CustomerTests.cs" />
+    <Compile Include="OrderDetailTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
