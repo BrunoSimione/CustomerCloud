@@ -10,7 +10,7 @@ namespace LogicTest
     [TestClass]
     public class OrderDetailTests
     {
-
+        [TestMethod]
         public void Create()
         {
             Mapper.Reset();
@@ -22,18 +22,27 @@ namespace LogicTest
             Assert.AreEqual(order.Id, result.Id);
         }
 
+        [TestMethod]
         public void Read()
         {
-
+            Mapper.Reset();
+            OrderDetailDTO order = CreateOrderDetail();
+            BaseLogic<OrderDetailEntity, OrderDetailDTO> logic = new BaseLogic<OrderDetailEntity, OrderDetailDTO>();
+            logic.Create(order);
+            OrderDetailDTO result = logic.Read(order.Id);
+            Assert.IsNotNull(result);
         }
 
-        public void Update()
-        {
-
-        }
-
+        [TestMethod]
         public void Delete()
         {
+            Mapper.Reset();
+            OrderDetailDTO order = CreateOrderDetail();
+            BaseLogic<OrderDetailEntity, OrderDetailDTO> logic = new BaseLogic<OrderDetailEntity, OrderDetailDTO>();
+            logic.Create(order);
+            logic.Delete(order.Id);
+            OrderDetailDTO result = logic.Read(order.Id);
+            Assert.IsNull(result);
 
         }
 
@@ -41,7 +50,13 @@ namespace LogicTest
         {
             return new OrderDetailDTO()
             {
-                Id = Guid.NewGuid()
+                Id = Guid.NewGuid(),
+                Product = new ProductDTO()
+                {
+                    Id = Guid.NewGuid(),
+                    Description = Faker.Lorem.Word(),
+                    Price = Faker.Number.RandomNumber()
+                }
             };
         }
     }
