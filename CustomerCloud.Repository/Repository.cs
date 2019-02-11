@@ -31,12 +31,13 @@ namespace CustomerCloud.Repository
 
         public void Update(T item)
         {
-            T existing = _context.Set<T>().Local.FirstOrDefault(entry => entry.Id == item.Id);
+            T existing = _context.Set<T>().FirstOrDefault(entry => entry.Id == item.Id);
             if (existing != null)
             {
-                _context.Entry(existing).State = EntityState.Detached;
+                _context.Entry(existing).State = EntityState.Deleted;
+                _context.SaveChanges();
             }
-            _context.Entry(item).State = EntityState.Modified;
+            _context.Entry(item).State = EntityState.Added;
             _context.SaveChanges();
         }
 

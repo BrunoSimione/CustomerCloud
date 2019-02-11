@@ -40,22 +40,6 @@ namespace LogicTest
             logic.Delete(order.Id);
         }
 
-        [TestMethod]
-        public void Update()
-        {
-            Mapper.Reset();
-            OrderDTO order = CreateOrder();
-            BaseLogic<OrderEntity, OrderDTO> logic = new BaseLogic<OrderEntity, OrderDTO>();
-            logic.Create(order);
-            var result = logic.Read(order.Id);
-            Assert.IsNotNull(result);
-            result.Details.Add(new OrderDetailDTO() { Id = Guid.NewGuid(), Product = new ProductDTO() { Id = Guid.NewGuid() } });
-            logic.Update(order);
-
-
-            logic.Delete(order.Id);
-
-        }
 
 
         private OrderDTO CreateOrder()

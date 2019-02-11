@@ -11,6 +11,7 @@ namespace CustomerCloud.Logic
 
         public BaseLogic()
         {
+            Mapper.Reset();
             Mapper.Initialize(cfg => cfg.CreateMap<TDTO, TEntity>());
             _repo = new Repository<TEntity>();
         }
