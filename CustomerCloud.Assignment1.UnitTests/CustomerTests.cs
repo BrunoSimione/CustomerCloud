@@ -1,4 +1,4 @@
-﻿using CustomerCloud.Assignment1.UnitTests.CustomerService;
+﻿using CustomerCloud.Assignment1.UnitTests.CustomerServiceReference;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -34,7 +34,7 @@ namespace CustomerCloud.Assignment1.UnitTests
         [TestMethod]
         public void Create_Customer()
         {
-            CustomerService.CustomerClient client = new CustomerClient("BasicHttpBinding_ICustomer");
+            CustomerServiceReference.CustomerClient client = new CustomerClient("BasicHttpBinding_ICustomer");
             client.Open();
             client.Create(_dto);
 

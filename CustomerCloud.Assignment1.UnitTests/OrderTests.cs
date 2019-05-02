@@ -1,5 +1,5 @@
 ﻿using System;
-using CustomerCloud.Assignment1.UnitTests.OrderService;
+using CustomerCloud.Assignment1.UnitTests.OrderServiceReference;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CustomerCloud.Assignment1.UnitTests

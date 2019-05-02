@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CustomerCloud.Assignment1.UnitTests</RootNamespace>
     <AssemblyName>CustomerCloud.Assignment1.UnitTests</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
@@ -20,6 +20,7 @@
     <TestProjectType>UnitTest</TestProjectType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,12 +53,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\CustomerService\Reference.cs">
+    <Compile Include="OrderDetailTests.cs" />
+    <Compile Include="ProductTests.cs" />
+    <Compile Include="AddressTests.cs" />
+    <Compile Include="Connected Services\AddressServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\OrderService\Reference.cs">
+    <Compile Include="Connected Services\CustomerServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\OrderDetailServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\OrderServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ProductServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -68,30 +87,69 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Connected Services\CustomerService\CustomerCloud.Assignment1.UnitTests.CustomerService.CustomerDTO.datasource">
+    <None Include="Connected Services\AddressServiceReference\CustomerCloud.Assignment1.UnitTests.AddressServiceReference.AddressDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CustomerService\CustomerCloud.DTOs.xsd">
+    <None Include="Connected Services\AddressServiceReference\CustomerCloud.DTOs.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CustomerService\service.wsdl" />
-    <None Include="Connected Services\CustomerService\service.xsd">
+    <None Include="Connected Services\AddressServiceReference\service.wsdl" />
+    <None Include="Connected Services\AddressServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CustomerService\service1.xsd">
+    <None Include="Connected Services\AddressServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\OrderService\CustomerCloud.Assignment1.UnitTests.OrderService.OrderDTO.datasource">
+    <None Include="Connected Services\CustomerServiceReference\CustomerCloud.Assignment1.UnitTests.CustomerServiceReference.CustomerDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\OrderService\CustomerCloud.DTOs.xsd">
+    <None Include="Connected Services\CustomerServiceReference\CustomerCloud.DTOs.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\OrderService\service.wsdl" />
-    <None Include="Connected Services\OrderService\service.xsd">
+    <None Include="Connected Services\CustomerServiceReference\service.wsdl" />
+    <None Include="Connected Services\CustomerServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\OrderService\service1.xsd">
+    <None Include="Connected Services\CustomerServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OrderDetailServiceReference\CustomerCloud.Assignment1.UnitTests.OrderDetailServiceReference.OrderDetailDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OrderDetailServiceReference\CustomerCloud.DTOs.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OrderDetailServiceReference\service.wsdl" />
+    <None Include="Connected Services\OrderDetailServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OrderDetailServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OrderServiceReference\CustomerCloud.Assignment1.UnitTests.OrderServiceReference.OrderDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OrderServiceReference\CustomerCloud.DTOs.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OrderServiceReference\service.wsdl" />
+    <None Include="Connected Services\OrderServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OrderServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ProductServiceReference\CustomerCloud.Assignment1.UnitTests.ProductServiceReference.ProductDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductServiceReference\CustomerCloud.DTOs.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ProductServiceReference\service.wsdl" />
+    <None Include="Connected Services\ProductServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ProductServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -100,29 +158,68 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\CustomerService\" />
-    <WCFMetadataStorage Include="Connected Services\OrderService\" />
+    <WCFMetadataStorage Include="Connected Services\AddressServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\CustomerServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\OrderDetailServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\OrderServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\ProductServiceReference\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\OrderService\configuration91.svcinfo" />
+    <None Include="Connected Services\AddressServiceReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\OrderService\configuration.svcinfo" />
+    <None Include="Connected Services\AddressServiceReference\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\OrderService\Reference.svcmap">
+    <None Include="Connected Services\AddressServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CustomerService\configuration91.svcinfo" />
+    <None Include="Connected Services\CustomerServiceReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CustomerService\configuration.svcinfo" />
+    <None Include="Connected Services\CustomerServiceReference\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CustomerService\Reference.svcmap">
+    <None Include="Connected Services\CustomerServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OrderServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OrderServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OrderServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OrderDetailServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OrderDetailServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OrderDetailServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ProductServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ProductServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ProductServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

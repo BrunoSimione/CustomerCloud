@@ -14,6 +14,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicTest", "LogicTest\LogicTest.csproj", "{A5438E9B-CF47-4783-9D68-0A4C76760911}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerCloud.Assignment1.UnitTests", "CustomerCloud.Assignment1.UnitTests\CustomerCloud.Assignment1.UnitTests.csproj", "{7DA1DE5D-26B9-4739-B25F-15856A46EC52}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B7177463-2E27-45C4-9A6B-D0C8A4F0DEA3} = {B7177463-2E27-45C4-9A6B-D0C8A4F0DEA3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerCloud.WCF", "CustomerCloud.WCF\CustomerCloud.WCF.csproj", "{B7177463-2E27-45C4-9A6B-D0C8A4F0DEA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerCloud.WebAPI", "CustomerCloud.WebAPI\CustomerCloud.WebAPI.csproj", "{6137FD92-DE93-490B-AA17-35F3738E437B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +52,14 @@ Global
 		{7DA1DE5D-26B9-4739-B25F-15856A46EC52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DA1DE5D-26B9-4739-B25F-15856A46EC52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DA1DE5D-26B9-4739-B25F-15856A46EC52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7177463-2E27-45C4-9A6B-D0C8A4F0DEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7177463-2E27-45C4-9A6B-D0C8A4F0DEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7177463-2E27-45C4-9A6B-D0C8A4F0DEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7177463-2E27-45C4-9A6B-D0C8A4F0DEA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6137FD92-DE93-490B-AA17-35F3738E437B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6137FD92-DE93-490B-AA17-35F3738E437B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6137FD92-DE93-490B-AA17-35F3738E437B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6137FD92-DE93-490B-AA17-35F3738E437B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

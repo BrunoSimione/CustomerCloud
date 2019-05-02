@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1f4c69b8-ff3a-4990-a940-93505a4e7885" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/CustomerCloud.WCF/Services/Customer/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="e14acca7-427c-4aec-8009-439aa17464d7" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CustomerCloud.WCF/Services/Customer/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="d5b949ff-1f5a-44b7-80a4-23091d361fd2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CustomerCloud.WCF/Services/Customer/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="a011b286-ec18-4649-b672-d17c91458470" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CustomerCloud.WCF/Services/Customer/mex" />
+    <MetadataFile FileName="CustomerCloud.DTOs.xsd" MetadataType="Schema" ID="2afa7019-9c11-4cc6-aa73-29ed9ca45994" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CustomerCloud.WCF/Services/Customer/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
